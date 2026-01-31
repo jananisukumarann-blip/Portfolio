@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janani - Web Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="templatemo-neural-style.css" rel="stylesheet">
+    
+    <style>
+        .project-link {
+            color: #e0a3ff;
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .project-link:hover {
+            color: #ff69b4;
+            transform: scale(1.2);
+            text-shadow: 0 0 10px rgba(224, 163, 255, 0.6);
+        }
+
+        .timeline-content h4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Mobile zoom prevention and alignment fixes */
+        html {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Prevent horizontal scroll */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Mobile-specific improvements */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 60px 15px !important;
+                margin-top: 100px !important;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+
+            .hero-description {
+                margin: 30px auto 40px !important;
+                padding: 0 10px;
+            }
+
+            .hero-description p {
+                font-size: 1.1rem !important;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 20px !important;
+                margin: 40px auto 40px !important;
+            }
+
+            .cta-buttons {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 15px !important;
+            }
+
+            .cta-button {
+                width: 80% !important;
+                max-width: 280px !important;
+                text-align: center !important;
+            }
+
+            header {
+                width: 95% !important;
+                padding: 15px 20px !important;
+                top: 10px !important;
+            }
+
+            .logo {
+                font-size: 1.5rem !important;
+            }
+
+            .logo-icon {
+                width: 30px !important;
+                height: 30px !important;
+            }
+
+            .section-title {
+                font-size: 2rem !important;
+                margin-bottom: 40px !important;
+            }
+
+            .hexagon-container {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 28px !important;
+                justify-items: center !important;
+                padding: 0 12px !important;
+                max-width: 360px !important;
+                margin: 0 auto !important;
+            }
+
+            .hexagon {
+                width: 180px !important;
+                height: 230px !important;
+                margin: 0 !important;
+                flex: none !important;
+            }
+
+            .hexagon-inner {
+                padding: 38px 18px !important;
+            }
+
+            .hexagon-icon {
+                font-size: 2.4rem !important;
+                margin-bottom: 10px !important;
+            }
+
+            .hexagon h4 {
+                font-size: 1.1rem !important;
+                margin-bottom: 8px !important;
+            }
+
+            .hexagon p {
+                font-size: 0.95rem !important;
+                max-width: 140px !important;
+                line-height: 1.35 !important;
+            }
+
+            .timeline-content {
+                padding: 30px 20px !important;
+                margin: 0 10px !important;
+            }
+
+            .contact-container {
+                padding: 0 15px !important;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 30px 20px !important;
+            }
+
+            .footer-links {
+                gap: 15px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem !important;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr !important;
+            }
+
+            .hexagon-container {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 36px !important;
+                justify-items: center !important;
+                padding: 0 8px !important;
+                max-width: 340px !important;
+                margin: 0 auto !important;
+            }
+
+            .hexagon {
+                width: 170px !important;
+                height: 220px !important;
+                margin: 0 !important;
+            }
+
+            .hexagon-inner {
+                padding: 32px 16px !important;
+            }
+
+            .hexagon-icon {
+                font-size: 2.2rem !important;
+            }
+
+            .hexagon h4 {
+                font-size: 1.05rem !important;
+            }
+
+            .hexagon p {
+                font-size: 0.9rem !important;
+                max-width: 130px !important;
+            }
+
+            .timeline-content {
+                padding: 25px 15px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- neural-background -->
+    <div class="neural-background"></div>
+
+    <!-- Floating geometric-shapes -->
+     <div class="geometric-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+     </div>
+
+     <div class="neural-line">
+        <div class="neural"></div>
+        <div class="neural"></div>
+        <div class="neural"></div>
+        <div class="neural"></div>
+
+     </div>
+
+     <!-- header -->
+     <header class="glass">
+        <nav>
+            <a href="#home" class="logo">
+                 <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#e0a3ff" />
+                            <stop offset="50%" style="stop-color:#ff69b4" />
+                            <stop offset="100%" style="stop-color:#9370db" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="30" r="8" fill="url(#logoGradient)" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="30" cy="60" r="6" fill="url(#logoGradient)" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="70" cy="65" r="7" fill="url(#logoGradient)" opacity="0.7">
+                        <animate attributeName="opacity" values="0.7;1;0.7" dur="1.8s" repeatCount="indefinite" />
+                    </circle>
+                    <line x1="50" y1="30" x2="30" y2="60" stroke="url(#logoGradient)" stroke-width="2" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="50" y1="30" x2="70" y2="65" stroke="url(#logoGradient)" stroke-width="2" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="30" y1="60" x2="70" y2="65" stroke="url(#logoGradient)" stroke-width="2" opacity="0.6">
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite" />
+                    </line>
+                </svg>
+                Janani Portfolio
+            </a>
+                <ul class="nav-links">
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#showcase">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="JananiS-resume.pdf" target="_blank" class="external-link">Resume</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                </div>
+        </nav>
+        <div class="mobile-nav">
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#showcase">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="JananiS-resume.pdf" target="_blank" class="external-link">Resume </a></li>
+                </div>
+     </header>
+     <!-- Setion-1 -->
+      <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-subtitle">Hello , I'm Janani</div>
+            <h1>WEB DEVELOPER</h1>
+            <div class="hero-description">
+                <p>Passionate about developing elegant and efficient web solutions that bring designs to life. I focus on creating intuitive, responsive, and accessible user interfaces using modern frontend tools.</p>
+            </div>
+            <a href="#contact" class="cta-button secondary">Get In Touch</a>
+        </div>
+      </section>
+
+      <!-- Section-3 -->
+       <section class="showcase" id="showcase">
+        <h2 class="section-title">TECHNICAL SKILLS</h2>
+        <div class="hexagon-container">
+            <div class="hexagon">
+                <div class="hexagon-inner glass">
+                    <div class="hexagon-icon">🌐</div>
+                    <h4>Frontend</h4>
+                    <p>HTML5 , CSS3 , JavaScript , React.js , Bootstrap</p>
+                </div> 
+            </div>
+            <div class="hexagon">
+                <div class="hexagon-inner glass">
+                    <div class="hexagon-icon">🗄️</div>
+                    <h4>Backend / DataBase</h4>
+                    <p>C , C++ , Python , JavaScript</p>
+                </div>
+            </div>
+            
+        </div>
+
+       </section>
+
+       <!-- Section-5 -->
+       <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info glass">
+                <h3>LET'S CONNECT</h3>
+                <p>I’m always excited to explore new opportunities and meaningful projects.
+                    Whether you’re looking to collaborate, have a question, or just want to connect, I’d be happy to hear from you.</p>
+                <p>Feel free to connect with me through any of the channels below. I’ll be happy to get back to you soon.</p>
+
+                <style>
+                    /* Neon rose social icons (scoped for contact section) */
+                    .social-links {
+                        display: flex;
+                        gap: 12px;
+                        margin-top: 20px;
+                        flex-wrap: wrap;
+                        align-items: center;
+                    }
+
+                    .social-link {
+                        width: 48px;
+                        height: 48px;
+                        display: inline-grid;
+                        place-items: center;
+                        border-radius: 10px;
+                        color: #ff2d95; /* neon rose primary */
+                        background: linear-gradient(135deg, rgba(255,45,149,0.08), rgba(224,163,255,0.03));
+                        box-shadow: 0 0 8px rgba(255,45,149,0.12);
+                        transition: transform .16s ease, box-shadow .16s ease, color .16s ease;
+                        text-decoration: none;
+                        border: 1px solid rgba(255,45,149,0.12);
+                    }
+
+                    .social-link svg {
+                        width: 24px;
+                        height: 24px;
+                        fill: currentColor;
+                        transition: transform .16s ease, filter .16s ease;
+                        filter: drop-shadow(0 0 6px rgba(255,45,149,0.55)) drop-shadow(0 0 14px rgba(224,163,255,0.28));
+                    }
+
+                    .social-link:hover {
+                        transform: translateY(-4px) scale(1.05);
+                        box-shadow: 0 8px 28px rgba(255,45,149,0.22), 0 0 34px rgba(224,163,255,0.12);
+                        color: #ff7fbf;
+                    }
+
+                    .social-link:active {
+                        transform: scale(0.98);
+                    }
+
+                    /* Slightly different accent for email */
+                    .social-link[aria-label="Email"] {
+                        background: radial-gradient(circle at 30% 20%, rgba(255,120,170,0.12), rgba(255,45,149,0.03));
+                        border-color: rgba(255,120,170,0.12);
+                    }
+                </style>
+
+                <div class="social-links" aria-label="Social links">
+                    <a href="www.linkedin.com/in/janani-shiva-499494311" class="glass social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h4.96V24H0V8.98zM8.98 8.98h4.76v2.03h.07c.66-1.25 2.28-2.57 4.7-2.57 5.02 0 5.95 3.31 5.95 7.62V24h-4.96v-6.67c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.52V24H8.98V8.98z"/>
+                        </svg>
+                    </a>
+
+                   
+                    <a href="mailto:jananisukumarann@gmail.com" class="glass social-link" aria-label="Email" title="Email">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24l-8 4.99-8-4.99V6l8 4.99L20 6v2.24z"/>
+                        </svg>
+                    </a>
+
+                    
+                </div></svg>
+            </div>
+
+            <div class="contact-form glass">
+                <form name="contact" method="POST" data-netlify="true">
+                    <!-- Netlify form name (required) -->
+                    <input type="hidden" name="form-name" value="contact">
+
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">About</a>
+                <a href="#showcase">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="JananiS-resume.pdf" target="_blank">Resume</a>
+               
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Janani Portfolio. All rights reserved.</p>
+            </div>
+            <div class="footer-design">
+                Design: <a href="www.linkedin.com/in/janani-shiva-499494311" target="_blank" rel="nofollow noopener">Janani</a><span class="footer-heart" aria-hidden="true" title="with love" style="color:#ffffff; margin-left:6px;">🩷</span>
+
+            </div>
+        </div>
+    </footer>
+    <script src="templatemo-neural-scripts.js"></script>
+    <script>
+        // Prevent zoom on mobile devices but allow scrolling
+        document.addEventListener('gesturestart', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('gesturechange', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('gestureend', function (e) {
+            e.preventDefault();
+        });
+
+        // Prevent double-tap zoom but allow single tap and scrolling
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Prevent pinch zoom but allow touch scrolling
+        document.addEventListener('touchmove', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+        // Ensure proper mobile viewport handling
+        function setViewport() {
+            const viewport = document.querySelector('meta[name="viewport"]');
+            if (viewport) {
+                viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no');
+            }
+        }
+
+        // Call on load and orientation change
+        window.addEventListener('load', setViewport);
+        window.addEventListener('orientationchange', function () {
+            setTimeout(setViewport, 100);
+        });
+    </script>
+</body>
+</html>
